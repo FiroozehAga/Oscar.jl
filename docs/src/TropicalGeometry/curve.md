@@ -27,6 +27,7 @@ For more definitions on the theory of divisors and linear sisyems on abstract tr
 ```@docs
 TropicalCurve{M}(PC::PolyhedralComplex) where {M}
 DivisorOnTropicalCurve(tc::TropicalCurve{M, EMB}, coeffs::Vector{Int}) where {M, EMB}
+StructureTropicalJacobian(TC::TropicalCurve)
 ```
 
 ## Auxiliary functions
@@ -38,5 +39,5 @@ degree(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
 is_effective(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
 chip_firing_move(dtc::DivisorOnTropicalCurve{M, EMB}, position::Int) where {M, EMB}
 v_reduced(dtc::DivisorOnTropicalCurve{M, EMB}, vertex::Int) where {M, EMB}
- is_linearly_equivalent(dtc1::DivisorOnTropicalCurve{M, EMB}, dtc2::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
+is_linearly_equivalent(dtc1::DivisorOnTropicalCurve{M, EMB}, dtc2::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
 ```

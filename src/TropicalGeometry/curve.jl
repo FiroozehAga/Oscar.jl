@@ -400,10 +400,10 @@ export DivisorOnTropicalCurve,
     is_effective,
     graph,
     base_curve,
-    chip_firing_move
     chip_firing_move,
     v_reduced, 
-    is_linearly_equivalent
+    is_linearly_equivalent,
+    StructureTropicalJacobian
 
 ###
 # 4. More properties
