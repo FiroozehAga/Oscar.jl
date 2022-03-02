@@ -29,7 +29,7 @@
 end
 export TropicalCurve
 
-function pm_object(T::TropicalCurve)
+function pm_object(T::TropicalCurve{M, EMB}) where {M, EMB}
     if has_attribute(T,:polymake_bigobject)
         return get_attribute(T,:polymake_bigobject)
     end
