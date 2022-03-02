@@ -31,7 +31,7 @@ DivisorOnTropicalCurve(tc::TropicalCurve{M, EMB}, coeffs::Vector{Int}) where {M,
 
 ## Auxiliary functions
 ```@docs
-graph(tc::TropicalCurve{M, EMB} where {M, EMB}
+graph(tc::TropicalCurve{M, EMB}) where {M, EMB}
 n_nodes(tc::TropicalCurve{M, EMB}) where {M, EMB}
 coefficients(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
 degree(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
