@@ -22,21 +22,24 @@ A *divisor* on an abstract tropical curve is a formal linear combination of the 
 
 For more definitions on the theory of divisors and linear sisyems on abstract tropical curve, we refer to [BN07](@cite).
 
+The *tropical Jacobian* of an abstract tropical curve is the group of divisors of degree zero modulo the subgroup of principal divisors. Here a principal divisor is the divisor associated to a piecewise-linear function on the vertices by the Laplacian operator. The tropical Jacobian is a finite abelian group, with order equal to the number of maximal spanning trees in the graph. It is isomorphic to $\prod{\mathbb{Z}/n_{i}\mathbb{Z}}$, where the $n_{i}$ are the nonzero elementary divisors of the Laplacian matrix. For more details, see [BN07](@cite).
+
 ## Construction
 
 ```@docs
-TropicalCurve{M}(PC::PolyhedralComplex)
-DivisorOnTropicalCurve(tc::TropicalCurve{M, EMB}, coeffs::Vector{Int})  
+TropicalCurve{M}(PC::PolyhedralComplex) where {M}
+DivisorOnTropicalCurve(tc::TropicalCurve{M, EMB}, coeffs::Vector{Int}) where {M, EMB}
+StructureTropicalJacobian(TC::TropicalCurve)
 ```
 
 ## Auxiliary functions
 ```@docs
-graph(tc::TropicalCurve{M, EMB}
-n_nodes(tc::TropicalCurve{M, EMB})
-coefficients(dtc::DivisorOnTropicalCurve{M, EMB})
-degree(dtc::DivisorOnTropicalCurve{M, EMB})
-is_effective(dtc::DivisorOnTropicalCurve{M, EMB})
-chip_firing_move(dtc::DivisorOnTropicalCurve{M, EMB}, position::Int)
-v_reduced(dtc::DivisorOnTropicalCurve{M, EMB}, vertex::Int)
- is_linearly_equivalent(dtc1::DivisorOnTropicalCurve{M, EMB}, dtc2::DivisorOnTropicalCurve{M, EMB})
+graph(tc::TropicalCurve{M, EMB}) where {M, EMB}
+n_nodes(tc::TropicalCurve{M, EMB}) where {M, EMB}
+coefficients(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
+degree(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
+is_effective(dtc::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
+chip_firing_move(dtc::DivisorOnTropicalCurve{M, EMB}, position::Int) where {M, EMB}
+v_reduced(dtc::DivisorOnTropicalCurve{M, EMB}, vertex::Int) where {M, EMB}
+is_linearly_equivalent(dtc1::DivisorOnTropicalCurve{M, EMB}, dtc2::DivisorOnTropicalCurve{M, EMB}) where {M, EMB}
 ```
